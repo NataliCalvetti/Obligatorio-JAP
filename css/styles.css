@@ -147,6 +147,9 @@ img.smallImg {
 
 div.alignRight {
   text-align: right;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
 }
 
 p.inline {
