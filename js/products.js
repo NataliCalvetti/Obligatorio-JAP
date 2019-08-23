@@ -14,15 +14,18 @@ function showProductsList(array){
         <div class="row" > 
             <div class="col-3"> <img class="smallImg img-thumbnail" src="${product.imgSrc}"> </div>
                 <div class="col">
-                    <div class="d-flex w-100 justify-content-between"> 
-                    <h4 class="col-8 row">${product.name}</h4>
-                        <p class="row">${product.cost}</p>
-                        <p class="row">${product.currency}</p>
-                        <p class="row">${product.description}</p>
+                    <div class="d-flex w-100 justify-content-between col-8 row"> 
+                        <h4 class="mb-1">${product.name}</h4>
                     </div>
-                <p class="soldCount">${product.soldCount}</p>
+                     <div>
+                        <p>${product.description}</p>
+                     </div> 
+                     <div class="alignRight"> 
+                        <p class="inline">${product.currency} $ ${product.cost}</p>
+                        <p class="soldCount">${product.soldCount} Vendidos</p>
+                    </div>
+                </div>
             </div>
-        </div>
         </a>
         `
 
@@ -35,11 +38,10 @@ function showProductsList(array){
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
-    getJSONData(PRODUCTS_URL).then(function(resultObj){
-        if (resultObj.status === "ok")
+    getJSONData(PRODUCTS_URL).then(function(jsonResult){
+        if (jsonResult.status === "ok")
         {
-            productsArray = resultObj.data;
-            console.log(productsArray);
+            productsArray = jsonResult.data;
             showProductsList(productsArray);
         }
     });

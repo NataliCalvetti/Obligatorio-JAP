@@ -144,3 +144,12 @@ img.smallImg {
   height: auto;
 
 }
+
+div.alignRight {
+  text-align: right;
+}
+
+p.inline {
+  display: inline;
+}
+
