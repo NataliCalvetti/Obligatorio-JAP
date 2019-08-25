@@ -1,0 +1,32 @@
+body {
+    background: linear-gradient(to right,rgb(238, 201, 224),rgb(241, 237, 237));
+}
+
+.textColor {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(247, 52, 94);
+}
+
+.center {
+    text-align: center;
+    padding: 3% 0 9%;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div2 {
+    padding: 8%;
+}
+
+.boton {
+    text-align: right;
+}
+
+.mensaje {
+    display: none;
+}
