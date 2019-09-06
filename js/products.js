@@ -1,7 +1,27 @@
 var productsArray = []; 
+const ORDER_ASC_BY_PRICE = "min";
+const ORDER_DESC_BY_PRICE = "max";
+var currentSortCriteria = ORDER_ASC_BY_PRICE;
+var minCost = undefined;
+var maxCost = undefined;
 
 function sortProducts(criteria, array){
-
+    let result = [];
+    if (criteria === ORDER_ASC_BY_PRICE)
+    {
+        result = array.sort(function(a, b) {
+            if ( a.cost < b.cost ){ return -1; }
+            if ( a.cost > b.cost ){ return 1; }
+            return 0;
+        });
+    }else if (criteria === ORDER_DESC_BY_PRICE){
+        result = array.sort(function(a, b) {
+            if ( a.cost > b.cost ){ return -1; }
+            if ( a.cost < b.cost ){ return 1; }
+            return 0;
+        });
+    }
+    return result;
 }
 
 function showProductsList(array){
@@ -33,6 +53,15 @@ function showProductsList(array){
     }
 }
 
+function sortAndShowProducts(sortCriteria, array){
+    currentSortCriteria = sortCriteria;
+    let products = array;
+
+    products = sortProducts(currentSortCriteria, products);
+
+    //Muestro las categorías ordenadas
+    showProductsList(products);
+}
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
@@ -46,3 +75,52 @@ document.addEventListener("DOMContentLoaded", function(e){
         }
     });
 });
+
+    document.getElementById("sortCrece").addEventListener("click", function(){
+        sortAndShowProducts(ORDER_ASC_BY_PRICE, productsArray);
+    });
+
+    document.getElementById("sortDecrece").addEventListener("click", function(){
+        sortAndShowProducts(ORDER_DESC_BY_PRICE, productsArray);
+    });
+
+
+    document.getElementById("rangeFilterCost").addEventListener("click", function(){
+        //Obtengo el mínimo y máximo de los intervalos para filtrar por cantidad
+        //de productos por categoría.
+        const min = document.getElementById("rangeFilterCostMin").value;
+        const max = document.getElementById("rangeFilterCostMax").value;
+
+        if ((min != undefined) && (min != "") && (parseInt(min)) >= 0){
+            minCost = parseInt(min);
+        }
+
+        if ((max != undefined) && (max != "") && (parseInt(max)) >= 0){
+            maxCost = parseInt(max);
+        }
+
+        filterProducts();
+    
+    });
+
+    function filterProducts(){
+        const filterArray = productsArray.filter((product)=>{  
+            if (!maxCost){
+                if (minCost){
+                    return product.cost >= minCost;
+                }
+            else {
+               return true;
+            }    
+            }
+            else {
+                if(!minCost){
+                    return product.cost <= maxCost;
+                }
+            else {
+                return product.cost <= maxCost && product.cost >= minCost;
+            }    
+            }
+        });
+        sortAndShowProducts(currentSortCriteria, filterArray); 
+    }

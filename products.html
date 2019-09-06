@@ -41,7 +41,51 @@
               </div>
           </div>
         </nav>
-    <main role="main" class="pb-5">
+    <main role="main" class="pb-5"> 
+      <div class="text-center p-4">
+        <h2>Productos</h2>
+     </div>
+        <div class="container">
+            <div class="row justify-content-end">
+              <div class="col-md-12 row justify-content-end">
+
+                <div class="col-md-6 col-sm-12 mb-1 container row">
+                  <div class="row container p-0 m-0">
+                    <div class="col">
+                      <p class="font-weight-normal text-right my-2">Ordenar por rango de precio: </p>
+                    </div>
+                    <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+                      <div class="col"> 
+                        <label class="btn btn-light active" id="sortCrece" >
+                          <input type="radio" name="options" autocomplete="off" checked>Creciente
+                        </label>
+                        <label class="btn btn-light" id="sortDecrece" >
+                          <input type="radio" name="options" autocomplete="off" checked>Decreciente
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      </div>
+      <div class="row container p-0 m-0 col-md-6">
+        <div class="col">
+          <p class="font-weight-normal text-right my-2">Cant.</p>
+        </div>
+        <div class="col">
+          <input class="form-control" type="number" placeholder="min." id="rangeFilterCostMin">
+        </div>
+        <div class="col">
+          <input class="form-control" type="number" placeholder="máx." id="rangeFilterCostMax">
+        </div>
+        <div class="col-3 p-0">
+          <div class="btn-group" role="group">
+            <button class="btn btn-light btn-block" id="rangeFilterCost">Filtrar</button>
+            <button class="btn btn-link btn-sm" id="clearFilterCost">Limpiar</button>
+          </div>
+        </div>
+      </div>
+     </div>
+    </div>
         <div class="container mt-5">
          <div id="productList">
 
@@ -51,15 +95,6 @@
             </div>
         </div>
     </main>
-    <footer class="text-muted bg-light">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Volver arriba</a>
-        </p>
-        <p>Este sitio forma parte de Programación Aplicada - JAP</p>
-        <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-      </div>
-    </footer>
     <div id="spinner-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
     <script src="js/vendor/jquery-3.4.1.min.js"></script>
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
