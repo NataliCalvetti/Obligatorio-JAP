@@ -27,6 +27,6 @@ body {
     text-align: right;
 }
 
-.mensaje {
+.mensaje, .mensaje-contraseña, .mensaje-usuario {
     display: none;
 }
