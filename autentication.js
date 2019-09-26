@@ -65,6 +65,23 @@ function onSignIn(googleUser) {
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
     var id_token = googleUser.getAuthResponse().id_token;
     console.log(id_token);
+
+   const googleAutentication = [ 
+        {
+            id: profile.getId(),
+            name: profile.getName(),
+            email: profile.getEmail()
+        }
+    ];
+
+    if(googleAutentication){
+        localStorage.setItem('usuario', googleAutentication.name);
+                   window.location.href = 'index.html';
+    }else {
+            document.querySelector('.mensaje-google').style.display = 'inline-block';
+
+    }
+
   }
 
   function signOut() {
