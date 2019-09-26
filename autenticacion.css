@@ -27,6 +27,6 @@ body {
     text-align: right;
 }
 
-.mensaje, .mensaje-contraseña, .mensaje-usuario {
+.mensaje, .mensaje-contraseña, .mensaje-usuario, .mensaje.google {
     display: none;
 }
