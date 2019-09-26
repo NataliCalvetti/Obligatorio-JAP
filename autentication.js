@@ -27,6 +27,7 @@ document.querySelector('button').addEventListener('click', (event) =>{
     document.querySelector('.mensaje-contraseña').style.display = 'none';
     document.querySelector('.mensaje-usuario').style.display = 'none';
     document.querySelector('.mensaje').style.display = 'none';
+    document.querySelector('.mensaje-google').style.display = 'none'
 
         let nameInput = document.getElementById('name').value;
         let passwordInput = document.getElementById('password').value;
