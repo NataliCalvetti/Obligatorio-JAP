@@ -1,29 +1,23 @@
-function onSignIn() {
-    var auth2; // The Sign-In object.
-var googleUser; // The current user.
+function onSignIn(googleUser) {
+    gapi.load('auth2', function() {
+        auth2 = gapi.auth2.init({
+          client_id: '647412047104-pfh3cjaqv6dc91ur84hnkjf9ltb8mstl.apps.googleusercontent.com',
+          fetch_basic_profile: false,
+          scope: 'profile'
+        });
+
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present. 
+  }
+}
 
 
-/**
- * Calls startAuth after Sign in V2 finishes setting up.
- */
-var appStart = function() {
-  gapi.load('auth2', initSigninV2);
-};
-
-
-/**
- * Initializes Signin v2 and sets up listeners.
- */
-var initSigninV2 = function() {
-  auth2 = gapi.auth2.init({
-      client_id: 'CLIENT_ID.apps.googleusercontent.com',
-      scope: 'profile'
-  });
-
-  // Listen for sign-in state changes.
-  auth2.isSignedIn.listen(signinChanged);
-
-  var signinChanged = function (val) {
-    console.log('Signin state changed to ', val);
-  };
-}}
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
