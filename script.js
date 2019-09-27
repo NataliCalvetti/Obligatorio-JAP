@@ -25,6 +25,5 @@ var initSigninV2 = function() {
 
   var signinChanged = function (val) {
     console.log('Signin state changed to ', val);
-    document.getElementById('signed-in-cell').innerText = val;
   };
 }}
