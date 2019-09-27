@@ -5,9 +5,10 @@ function onSignIn(googleUser) {
           fetch_basic_profile: false,
           scope: 'profile'
         });
+      }
+      );
+    }
       
-        // Sign the user in, and then retrieve their ID.
-      });
 
       function whenClick() {
         auth2.signIn().then(function() {
@@ -57,4 +58,4 @@ function onSignIn(googleUser) {
     auth2.signOut().then(function () {
       console.log('User signed out.');
     });
-  }}}
+  }}
