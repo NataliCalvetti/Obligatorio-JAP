@@ -30,8 +30,7 @@ document.addEventListener('DOMContentLoaded', (event) =>{
 
 function remove () {
     localStorage.removeItem('usuario');
-    if(gapi.user)
-};
+}
 
 
 
