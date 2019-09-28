@@ -6,7 +6,7 @@
      });
      gapi.auth2.getAuthInstance();
 
-     gapi.auth2.onSignIn(() => {
+     gapi.auth2.onSignIn( async () => {
          var profile = await googleUser.getBasicProfile();
          var id_token = await googleUser.getAuthResponse().id_token;
          if(id_token){
