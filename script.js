@@ -1,10 +1,10 @@
-function onSignIn(googleUser) {
+ async function onSignIn(googleUser) {
     document.querySelector('.mensaje-google').style.display = 'none';
     var profile = googleUser.getBasicProfile();
-    var id_token = googleUser.getAuthResponse().id_token;
+    var id_token = await googleUser.getAuthResponse().id_token;
 
     if(id_token){
-        const googleUsername = profile.getName();
+        const googleUsername = await profile.getName();
         localStorage.setItem('usuario', googleUsername);
         window.location.href = 'index.html';
     } else {
