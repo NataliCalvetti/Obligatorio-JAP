@@ -1,4 +1,8 @@
  async function onSignIn() {
+    gapi.load('auth2', (response) => {
+        console.log(response);
+      });
+
     gapi.client.init({
         'clientId': '647412047104-pfh3cjaqv6dc91ur84hnkjf9ltb8mstl.apps.googleusercontent.com',
         'scope': "profile"
