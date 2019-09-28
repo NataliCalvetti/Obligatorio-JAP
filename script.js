@@ -1,16 +1,12 @@
  async function onSignIn() {
-    gapi.load('auth2', (response) => {
-        console.log(response);
+    gapi.load('auth2', () => {
+        gapi.auth2.init({
+            'clientId': '647412047104-pfh3cjaqv6dc91ur84hnkjf9ltb8mstl.apps.googleusercontent.com',
+            'scope': "profile"
+        })
       });
 
       /* 
-    gapi.auth2.init({
-        'clientId': '647412047104-pfh3cjaqv6dc91ur84hnkjf9ltb8mstl.apps.googleusercontent.com',
-        'scope': "profile"
-    }).then(function () {
-      gapi.auth2.onSignIn().then( (response) => {
-        console.log(response);
-      });
 
       // Listen for sign-in state changes.
       GoogleAuth.isSignedIn.listen(updateSigninStatus);
