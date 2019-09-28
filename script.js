@@ -3,7 +3,7 @@
         console.log(response);
       });
 
-    gapi.client.init({
+    gapi.auth2.init({
         'clientId': '647412047104-pfh3cjaqv6dc91ur84hnkjf9ltb8mstl.apps.googleusercontent.com',
         'scope': "profile"
     }).then(function () {
