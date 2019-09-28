@@ -3,6 +3,7 @@
         console.log(response);
       });
 
+      /* 
     gapi.auth2.init({
         'clientId': '647412047104-pfh3cjaqv6dc91ur84hnkjf9ltb8mstl.apps.googleusercontent.com',
         'scope': "profile"
@@ -11,7 +12,7 @@
         console.log(response);
       });
 
-      /* // Listen for sign-in state changes.
+      // Listen for sign-in state changes.
       GoogleAuth.isSignedIn.listen(updateSigninStatus);
 
       // Handle initial sign-in state. (Determine if user is already signed in.)
@@ -29,5 +30,8 @@
         window.location.href = 'index.html';
     } else {
         document.querySelector('.mensaje-google').style.display = 'inline-block';
-    } */
-    })};
+    } 
+})};
+   */
+
+}
