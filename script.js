@@ -1,4 +1,4 @@
- async function onSignIn() {
+ async function onSignIn(googleUser) {
     document.querySelector('.mensaje-google').style.display = 'none';
     var profile = await googleUser.getBasicProfile();
     var id_token = await googleUser.getAuthResponse().id_token;
