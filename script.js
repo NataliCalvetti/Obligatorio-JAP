@@ -9,6 +9,7 @@ function onSignIn(googleUser) {
     console.log(id_token);
 
     if(id_token){
+        localStorage.setItem('usuario', profile.getName());
         window.location.href = 'index.html';
     } else {
         document.querySelector('.mensaje-google').style.display = 'inline-block';
