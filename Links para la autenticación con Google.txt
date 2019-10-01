@@ -1,0 +1,13 @@
+Link del dominio:
+https://natalicalvetti.github.io/Obligatorio-JAP.github.io/
+
+Link para la página inicial de autenticación:
+https://natalicalvetti.github.io/Obligatorio-JAP.github.io/autenticacion.html
+
+Link para la página de inicio: 
+https://natalicalvetti.github.io/Obligatorio-JAP.github.io/index.html
+
+Link del repositorio:
+https://github.com/NataliCalvetti/Obligatorio-JAP.github.io
+
+

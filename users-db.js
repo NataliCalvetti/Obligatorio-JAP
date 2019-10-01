@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', (event) =>{
         <div class="dropdown-menu">
         <a class="dropdown-item" href="cart.html">Mi carrito</a>
         <div class="dropdown-divider"></div>
+        <div style = "display:none" align="middle" class="g-signin2" data-cookiepolicy='single_host_origin' data-onsuccess="onSignIn"></div>
         <a class="dropdown-item" onclick="remove()" id="cerrarSesion" href="autenticacion.html">Cerrar Sesión</a>
         </div>
         </div>
