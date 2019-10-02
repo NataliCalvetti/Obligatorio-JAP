@@ -41,10 +41,28 @@ function showArticles(articles){
 
             <dt>Precio</dt>
             <dd><p class="inline">${articles.currency} $ ${articles.unitCost}</p></dd>
-        </dl>
-        <div>
-        <img class="img-fluid img-thumbnail pt-2 col-lg-3 col-md-3" src="${articles.src}">
-        </div>
+            <div>
+            <img class="img-fluid img-thumbnail pt-2 col-lg-3 col-md-3" src="${articles.src}">
+            </div>
+            <div>
+            <dt>Cantidad a comprar</dt>
+            <dd><input class="form-control" type="number" placeholder="Cantidad"></dd>
+            </div>
+            <div class="row">
+                  <div class="col-md-7 mb-3">
+                  <label for="state">Método de envío</label>
+                  <select class="custom-select d-block w-100">
+                    <option value="">Elija un método de envio...</option>
+                    <option>Premium (2-5 días) - Costo del 15% sobre el subtotal.</option>
+                    <option>Express (5-8 días) - Costo del 7% sobre el subtotal.</option>
+                    <option>Standard (12 a 15 días) - Costo del 5% sobre el subtotal.</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor ingresa una categoría válida.
+                  </div>
+                </div>
+              </div>
+        
     </div>
         ` ;
         document.getElementById("showCartArticles").innerHTML = htmlContentToAppend;
