@@ -32,22 +32,6 @@ function showArticles(articles){
     <div class="text-center p-4">
             <h2>Mi carrito</h2>
     <div class="container mt-5"></div>
-    <p class="lead">Ingresa los datos del artículo a vender.</p>
-        <div class="row justify-content-md-center">
-          <div class="col-md-8 order-md-1">
-            <h4 class="mb-3">Información del producto</h4>
-            <form class="needs-validation" id="sell-info">
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="productName">Nombre</label>
-                  <input type="text" class="form-control" id="productName" placeholder="" value="" >
-                  <div class="invalid-feedback">
-                    Ingresa un nombre
-                  </div>
-                </div>
-              </div>
-              </div>
-              </div>
     </main>
         ` 
         document.getElementById("showCartArticules").innerHTML = htmlContentToAppend;
