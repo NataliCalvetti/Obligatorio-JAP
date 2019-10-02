@@ -36,7 +36,7 @@ function showArticles(articles){
         <h3>${articles.name}</h3>
         <hr class="my-3">
         <dl>
-            <dt>Cantidad</dt>
+            <dt>Cantidad disponible</dt>
             <dd><p>${articles.count}</p></dd>
 
             <dt>Precio</dt>
@@ -46,11 +46,11 @@ function showArticles(articles){
             </div>
             <div>
             <dt>Cantidad a comprar</dt>
-            <dd><input class="form-control" type="number" placeholder="Cantidad"></dd>
+            <dd><input class="form-control" type="number" min="0" placeholder="Cantidad"></dd>
             </div>
             <div class="row">
                   <div class="col-md-7 mb-3">
-                  <label for="state">Método de envío</label>
+                  <dt>Método de envío</dt>
                   <select class="custom-select d-block w-100">
                     <option value="">Elija un método de envio...</option>
                     <option>Premium (2-5 días) - Costo del 15% sobre el subtotal.</option>
