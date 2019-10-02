@@ -1,4 +1,4 @@
-let articule = {};
+let article = {};
 let productUnitCost = 0;
 let productCurrency = "";
 let subtotal = 0;
@@ -33,18 +33,18 @@ function showArticles(articles){
             <h2>Mi carrito</h2>
             <p class="lead">Información del artículo</p>
         </div>
-        <h3>${articule.name}</h3>
+        <h3>${articles.name}</h3>
         <hr class="my-3">
         <dl>
             <dt>Cantidad</dt>
-            <dd><p>${articule.count}</p></dd>
+            <dd><p>${articles.count}</p></dd>
 
             <dt>Precio</dt>
-            <dd><p class="inline">${articule.currency} $ ${articule.cost}</p></dd>
+            <dd><p class="inline">${articles.currency} $ ${articles.cost}</p></dd>
         </dl>
     </div>
         ` ;
-        document.getElementById("showCartArticules").innerHTML = htmlContentToAppend;
+        document.getElementById("showCartArticles").innerHTML = htmlContentToAppend;
     
 }
 
@@ -54,7 +54,8 @@ function showArticles(articles){
 document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(CART_INFO_URL).then(function(resultObj){
         if (resultObj.status === "ok"){
-            showArticles(resultObj.data);
+            article = resultObj.data;
+            showArticles(article);
         }
     });
 });
