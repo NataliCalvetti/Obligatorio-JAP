@@ -29,7 +29,8 @@ function hidePaymentTypeNotSelected(){
 function showArticles(articles){
     const htmlContentToAppend = `
     <main role="main">
-    <h2>Carrito</h2>
+    <div class="text-center p-4">
+            <h2>Descripción del Producto</h2>
     <div class="container mt-5"></div>
     </main>
       <div class="modal fade" tabindex="-1" role="dialog" id="contidionsModal">
