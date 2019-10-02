@@ -1,3 +1,4 @@
+let product = {};
 let productUnitCost = 0;
 let productCurrency = "";
 let subtotal = 0;
@@ -7,7 +8,6 @@ let paymentTypeSelected = false;
 const CREDIT_CARD_PAYMENT = "Tarjeta de crédito";
 const BANKING_PAYMENT = "Transferencia bancaria";
 let ERROR_MSG = "Ha habido un error :(, verifica qué pasó.";
-let product = {};
 
 //Función que se utiliza para actualizar los costos de publicación
 function updateTotalCosts(){
@@ -28,9 +28,9 @@ function hidePaymentTypeNotSelected(){
 
 function showArticles(articles){
     const htmlContentToAppend = `
-    <div class="container mt-5">
-			</div>
-		</div>
+    <main role="main">
+    <h2>Carrito</h2>
+    <div class="container mt-5"></div>
     </main>
       <div class="modal fade" tabindex="-1" role="dialog" id="contidionsModal">
         <div class="modal-dialog" role="document">
@@ -99,7 +99,7 @@ function showArticles(articles){
         </div>
       </div>
         ` 
-        document.getElementById("showCartArticule").innerHTML = htmlContentToAppend;
+        document.getElementById("showCartArticules").innerHTML = htmlContentToAppend;
     
 }
 
