@@ -1,4 +1,4 @@
-let product = {};
+let articule = {};
 let productUnitCost = 0;
 let productCurrency = "";
 let subtotal = 0;
@@ -44,7 +44,8 @@ function showArticles(articles){
 document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(CART_INFO_URL).then(function(resultObj){
         if (resultObj.status === "ok"){
-            showArticles(resultObj.data);
+            
+            articule = resultObj.data;
         }
     });
 });
