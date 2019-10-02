@@ -40,8 +40,9 @@ function showArticles(articles){
             <dd><p>${articles.count}</p></dd>
 
             <dt>Precio</dt>
-            <dd><p class="inline">${articles.currency} $ ${articles.cost}</p></dd>
+            <dd><p class="inline">${articles.currency} $ ${articles.unitCost}</p></dd>
         </dl>
+        <img class="img-fluid img-thumbnail pt-2 col-lg-3 col-md-3" src="${articles.src}">
     </div>
         ` ;
         document.getElementById("showCartArticles").innerHTML = htmlContentToAppend;
