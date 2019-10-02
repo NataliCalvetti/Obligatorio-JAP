@@ -54,7 +54,7 @@ function showArticles(articles){
 document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(CART_INFO_URL).then(function(resultObj){
         if (resultObj.status === "ok"){
-            article = resultObj.data;
+            article = resultObj.data[0];
             showArticles(article);
         }
     });
