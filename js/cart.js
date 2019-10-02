@@ -46,7 +46,7 @@ function showArticles(articles){
             </div>
             <div>
             <dt>Cantidad a comprar</dt>
-            <dd><input class="form-control" type="number" min="0" placeholder="Cantidad"></dd>
+            <dd><input class="form-control d-block w-100" type="number" min="0" placeholder="Cantidad"></dd>
             </div>
             <div class="row">
                   <div class="col-md-7 mb-3">
@@ -57,9 +57,6 @@ function showArticles(articles){
                     <option>Express (5-8 días) - Costo del 7% sobre el subtotal.</option>
                     <option>Standard (12 a 15 días) - Costo del 5% sobre el subtotal.</option>
                   </select>
-                  <div class="invalid-feedback">
-                    Por favor ingresa una categoría válida.
-                  </div>
                 </div>
               </div>
         
