@@ -98,6 +98,7 @@ function showArticles(articles){
             </div>
           </div>
         </div>
+        </div>
     </main>
         ` ;
         document.getElementById("showCartArticules").innerHTML = htmlContentToAppend;
