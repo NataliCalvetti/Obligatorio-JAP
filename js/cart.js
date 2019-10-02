@@ -33,5 +33,9 @@ function showArticles(articles){
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
-
+    getJSONData(CART_INFO_URL).then(function(resultObj){
+        if (resultObj.status === "ok"){
+            showArticles(resultObj.data);
+        }
+    });
 });
