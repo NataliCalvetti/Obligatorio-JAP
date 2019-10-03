@@ -39,19 +39,19 @@ function showArticles(articles){
             <dt>Cantidad disponible</dt>
             <dd><p>${articles.count}</p></dd>
 
-            <dt>Precio</dt>
+            <dt>Costo unitario</dt>
             <dd><p class="inline">${articles.currency} $ ${articles.unitCost}</p></dd>
             <div>
             <img class="img-fluid img-thumbnail pt-2 col-lg-3 col-md-3" src="${articles.src}">
             </div>
             <div>
             <dt>Cantidad a comprar</dt>
-            <dd><input class="form-control d-block w-100" type="number" min="0" placeholder="Cantidad"></dd>
+            <dd><input class="form-control myBlock" type="number" min="0" placeholder="Cantidad"></dd>
             </div>
             <div class="row">
                   <div class="col-md-7 mb-3">
                   <dt>Método de envío</dt>
-                  <select class="custom-select d-block w-100">
+                  <select class="myBlock">
                     <option value="">Elija un método de envio...</option>
                     <option>Premium (2-5 días) - Costo del 15% sobre el subtotal.</option>
                     <option>Express (5-8 días) - Costo del 7% sobre el subtotal.</option>

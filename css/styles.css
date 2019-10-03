@@ -165,7 +165,10 @@ p.inline {
   background-color: rgb(247, 52, 94);
 }
 
-
+.myBlock {
+  width: 390px;
+  height: 38px;
+}
 
 
 
