@@ -51,7 +51,7 @@ function showArticles(articles){
             <div class="row">
                   <div class="col-md-7 mb-3">
                   <dt>Método de envío</dt>
-                  <select class="myBlock">
+                  <select class="form-control myBlock">
                     <option value="">Elija un método de envio...</option>
                     <option>Premium (2-5 días) - Costo del 15% sobre el subtotal.</option>
                     <option>Express (5-8 días) - Costo del 7% sobre el subtotal.</option>
