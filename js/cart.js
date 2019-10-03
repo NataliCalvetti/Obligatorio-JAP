@@ -8,14 +8,15 @@ let paymentTypeSelected = false;
 const CREDIT_CARD_PAYMENT = "Tarjeta de crédito";
 const BANKING_PAYMENT = "Transferencia bancaria";
 let ERROR_MSG = "Ha habido un error :(, verifica qué pasó.";
+let totalCost = articles.unitCost;
 
-function alert(value){
-    console.log(value);
-}
 
 //Función que se utiliza para actualizar los costos de publicación
-function updateTotalCosts(){
-
+function updateTotalCosts(value, tipo){
+    if(tipo === 'cantidad') {
+        totalCost = totalCost * value;
+        console.log(totalCost);
+    }
 }
 
 function updateSubtotal(){
