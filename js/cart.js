@@ -26,13 +26,13 @@ function updateTotalCosts(value, tipo){
         console.log(totalCost);
     } 
     if(tipo === 'envio'){
-        if(shippingType.premium){
+        if(shippingType.premium === value){
             totalCost = totalCost * shippingPremium;
         }
-    if(shippingType.express){
+    if(shippingType.express === value){
         totalCost = totalCost * shippingExpress;
         }
-    if(shippingType.standard){
+    if(shippingType.standard === value){
         totalCost = totalCost * shippingStandard;
         }    console.log(totalCost);
     }
