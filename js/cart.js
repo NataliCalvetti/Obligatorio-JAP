@@ -66,11 +66,30 @@ function showArticles(articles){
             <dd><p class="inline">${articles.currency} $ ${articles.unitCost}</p></dd>
             <div>
             <img class="img-fluid img-thumbnail pt-2 col-lg-3 col-md-3" src="${articles.src}">
+            </dl>
             </div>   
     </div>
         ` ;
         document.getElementById("showCartArticles").innerHTML = htmlContentToAppend;
     
+}
+
+function paymentInformation(){
+    const htmlContentToAppend = `
+    <hr class="my-3">
+    <dl>
+    <dt>Cantidad a comprar</dt>
+            <dd><p>${}</p></dd>
+    <dt>Costo total del costo unitario</dt>
+            <dd><p>${}</p></dd>
+    <dt>Subtotal</dt>
+            <dd><p>${}</p></dd>
+    <dt>Costo de envio</dt>
+            <dd><p>${}</p></dd>
+    <dt>Total a pagar</dt>
+            <dd><p>${}</p></dd>
+    </dl>
+    `
 }
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
