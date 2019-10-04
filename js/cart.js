@@ -30,12 +30,13 @@ function updateTotalCosts(value, tipo){
         if(value === shippingType.premium){
             costoDeEnvio = totalCost * shippingPremium;
         }
-    if(value === shippingType.express){
-        costoDeEnvio = totalCost * shippingExpress;
+        if(value === shippingType.express){
+            costoDeEnvio = totalCost * shippingExpress;
         }
-    if(value === shippingType.standard){
-        costoDeEnvio = totalCost * shippingStandard;
+        if(value === shippingType.standard){
+            costoDeEnvio = totalCost * shippingStandard;
         }    
+        paymentInformation();
     }
 }
 
@@ -78,7 +79,6 @@ function showArticles(articles){
 
 function paymentInformation(){
     const htmlContentToAppend = `
-    <hr class="my-3">
     <dl>
     <dt>Cantidad a comprar</dt>
             <dd><p>${cantidadAComprar}</p></dd>
@@ -103,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function(e){
         if (resultObj.status === "ok"){
             article = resultObj.data.articles[0];
             showArticles(article);
-            paymentInformation();
         }
     });
 });
