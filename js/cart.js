@@ -17,7 +17,7 @@ let totalCost = article.unitCost;
 function updateTotalCosts(value, tipo){
     if(tipo === 'cantidad') {
         totalCost = totalCost * parseInt(value, 10);
-        console.log(totalCost);
+        console.log(value);
     } 
     if(tipo === 'envio'){
         console.log(value);
