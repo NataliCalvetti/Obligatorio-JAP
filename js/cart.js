@@ -2,9 +2,9 @@ let article = {};
 let productUnitCost = 0;
 let productCurrency = "";
 let subtotal = 0;
-let shippingPremium = 1.15;
-let shippingExpress = 1.07;
-let shippingStandard = 1.05;
+let shippingPremium = 0.15;
+let shippingExpress = 0.07;
+let shippingStandard = 0.05;
 const shippingType = {
     premium: "Premium (2-5 días) - Costo del 15% sobre el subtotal.",
     express: "Express (5-8 días) - Costo del 7% sobre el subtotal.",
@@ -16,24 +16,26 @@ const CREDIT_CARD_PAYMENT = "Tarjeta de crédito";
 const BANKING_PAYMENT = "Transferencia bancaria";
 let ERROR_MSG = "Ha habido un error :(, verifica qué pasó.";
 let totalCost = 0;
+let cantidadAComprar = 0;
+let costoDeEnvio = 0;
 
 
 //Función que se utiliza para actualizar los costos de publicación
 function updateTotalCosts(value, tipo){
     if(tipo === 'cantidad') {
         totalCost = article.unitCost * parseInt(value, 10);
-        console.log(totalCost);
+        cantidadAComprar = value;
     } 
     if(tipo === 'envio'){
         if(value === shippingType.premium){
-            totalCost = totalCost * shippingPremium;
+            costoDeEnvio = totalCost * shippingPremium;
         }
     if(value === shippingType.express){
-        totalCost = totalCost * shippingExpress;
+        costoDeEnvio = totalCost * shippingExpress;
         }
     if(value === shippingType.standard){
-        totalCost = totalCost * shippingStandard;
-        }    console.log(totalCost);
+        costoDeEnvio = totalCost * shippingStandard;
+        }    
     }
 }
 
@@ -79,17 +81,18 @@ function paymentInformation(){
     <hr class="my-3">
     <dl>
     <dt>Cantidad a comprar</dt>
-            <dd><p>${}</p></dd>
+            <dd><p>${cantidadAComprar}</p></dd>
     <dt>Costo total del costo unitario</dt>
-            <dd><p>${}</p></dd>
+            <dd><p></p></dd>
     <dt>Subtotal</dt>
-            <dd><p>${}</p></dd>
+            <dd><p></p></dd>
     <dt>Costo de envio</dt>
-            <dd><p>${}</p></dd>
+            <dd><p>${costoDeEnvio}</p></dd>
     <dt>Total a pagar</dt>
-            <dd><p>${}</p></dd>
+            <dd><p>${totalCost + costoDeEnvio}</p></dd>
     </dl>
-    `
+    `;
+    document.getElementById("paymentInfo").innerHTML = htmlContentToAppend;
 }
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
