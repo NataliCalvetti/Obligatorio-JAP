@@ -69,6 +69,7 @@ function showArticles(articles){
             <dd><p class="inline">${articles.currency} $ ${articles.unitCost}</p></dd>
             <div>
             <img class="img-fluid img-thumbnail pt-2 col-lg-3 col-md-3" src="${articles.src}">
+            </dl>
             </div>   
     </div>
         ` ;
@@ -78,6 +79,8 @@ function showArticles(articles){
 
 function paymentInformation(){
     const htmlContentToAppend = `
+    <div class="container mt-5">
+    <dl>
     <dt>Cantidad a comprar</dt>
             <dd><p>${cantidadAComprar}</p></dd>
     <dt>Costo total del costo unitario</dt>
@@ -88,6 +91,8 @@ function paymentInformation(){
             <dd><p>${costoDeEnvio}</p></dd>
     <dt>Total a pagar</dt>
             <dd><p>${totalCost + costoDeEnvio}</p></dd>
+    </dl>
+    </div>
     `;
     document.getElementById("paymentInfo").innerHTML = htmlContentToAppend;
 }
