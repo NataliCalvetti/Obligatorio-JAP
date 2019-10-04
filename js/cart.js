@@ -17,10 +17,6 @@ function updateTotalCosts(value, tipo){
         totalCost = totalCost * value;
         console.log(totalCost);
     }
-    if(tipo === 'envio') {
-        totalCost = totalCost * shippingPercentage;
-        console.log(totalCost);
-    }
 }
 
 function updateSubtotal(){
