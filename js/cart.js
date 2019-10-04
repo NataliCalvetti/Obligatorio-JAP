@@ -10,13 +10,14 @@ let paymentTypeSelected = false;
 const CREDIT_CARD_PAYMENT = "Tarjeta de crédito";
 const BANKING_PAYMENT = "Transferencia bancaria";
 let ERROR_MSG = "Ha habido un error :(, verifica qué pasó.";
-let totalCost = article.unitCost;
+let totalCost = 0;
 
 
 //Función que se utiliza para actualizar los costos de publicación
 function updateTotalCosts(value, tipo){
     if(tipo === 'cantidad') {
-        totalCost = totalCost * parseInt(value, 10);
+        totalCost = article.unitCost;
+        totalCost = totalCost * value;
         console.log(value);
     } 
     if(tipo === 'envio'){
