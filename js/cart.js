@@ -2,9 +2,14 @@ let article = {};
 let productUnitCost = 0;
 let productCurrency = "";
 let subtotal = 0;
-let shippingPremium = 0.15;
-let shippingExpress = 0.7;
-let shippingStandard = 0.5;
+let shippingPremium = 1.15;
+let shippingExpress = 1.7;
+let shippingStandard = 1.5;
+const shippingType = {
+    premium: "Premium (2-5 días) - Costo del 15% sobre el subtotal.",
+    express: "Express (5-8 días) - Costo del 7% sobre el subtotal.",
+    standard:"Standard (12 a 15 días) - Costo del 5% sobre el subtotal."   
+}
 let total = 0;
 let paymentTypeSelected = false;
 const CREDIT_CARD_PAYMENT = "Tarjeta de crédito";
@@ -17,20 +22,20 @@ let totalCost = 0;
 function updateTotalCosts(value, tipo){
     if(tipo === 'cantidad') {
         totalCost = article.unitCost;
-        totalCost = totalCost * value;
+        totalCost = totalCost * parseInt(value, 10);
         console.log(value);
     } 
     if(tipo === 'envio'){
         console.log(value);
-        /*if(shippingPremium){
-            totalCost = totalCost * 1.15;
+        if(shippingType.premium){
+            totalCost = totalCost * shippingPremium;
         }
-    if(shippingExpress){
-        totalCost = totalCost * 1.7;
+    if(shippingType.express){
+        totalCost = totalCost * shippingExpress;
         }
-    if(shippingStandard){
-        totalCost = totalCost * 1.5;
-        }  */  
+    if(shippingType.standard){
+        totalCost = totalCost * shippingStandard;
+        }    
     }
 }
 
