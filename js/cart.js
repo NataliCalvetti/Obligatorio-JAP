@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         if (resultObj.status === "ok"){
             article = resultObj.data.articles[0];
             showArticles(article);
+            paymentInformation();
         }
     });
 });
