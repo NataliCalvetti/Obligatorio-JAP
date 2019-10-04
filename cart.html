@@ -61,28 +61,30 @@
               </div>
           </div>
         </nav>   
-      <div id="showCartArticles"></div>
-      <div>
-        <dt>Cantidad a comprar</dt>
-        <dd><input class="form-control myBlock" type="number" min="0" placeholder="Cantidad" onchange="updateTotalCosts(this.value, 'cantidad')"></dd>
-        </div>
-        <div class="row">
-              <div class="col-md-7 mb-3">
+        <div class="container mt-5">
+          <div id="showCartArticles"></div>
+          <div>
+            <dt>Cantidad a comprar</dt>
+            <dd><input class="form-control myBlock" type="number" min="0" placeholder="Cantidad" onchange="updateTotalCosts(this.value, 'cantidad')"></dd>
+          </div>
+          <div class="row">
+            <div class="col-md-7 mb-3">
               <dt>Método de envío</dt>
               <select class="form-control myBlock" onchange="updateTotalCosts(this.value, 'envio')">
-                <option value="">Elija un método de envio...</option>
-                <option>Premium (2-5 días) - Costo del 15% sobre el subtotal.</option>
-                <option>Express (5-8 días) - Costo del 7% sobre el subtotal.</option>
-                <option>Standard (12 a 15 días) - Costo del 5% sobre el subtotal.</option>
-              </select>
+                  <option value="">Elija un método de envio...</option>
+                  <option>Premium (2-5 días) - Costo del 15% sobre el subtotal.</option>
+                  <option>Express (5-8 días) - Costo del 7% sobre el subtotal.</option>
+                  <option>Standard (12 a 15 días) - Costo del 5% sobre el subtotal.</option>
+                </select>
+              </div>
+              <div id="paymentInfo"></div>
             </div>
-            <div id="paymentInfo"></div>
           </div>
-      <div class="modal fade" tabindex="-1" role="dialog" id="contidionsModal">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Forma de pago</h5>
+            <div class="modal fade" tabindex="-1" role="dialog" id="contidionsModal">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Forma de pago</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>

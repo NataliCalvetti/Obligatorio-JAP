@@ -79,7 +79,7 @@ function showArticles(articles){
 
 function paymentInformation(){
     const htmlContentToAppend = `
-    <div class="container mt-5">
+    <div>
     <dl>
     <dt>Cantidad a comprar</dt>
             <dd><p>${cantidadAComprar}</p></dd>
