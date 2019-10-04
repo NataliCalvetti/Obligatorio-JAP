@@ -2,7 +2,9 @@ let article = {};
 let productUnitCost = 0;
 let productCurrency = "";
 let subtotal = 0;
-let shippingPercentage = 0.15;
+let shippingPremium = 0.15;
+let shippingExpress = 0.7;
+let shippingStandard = 0.5;
 let total = 0;
 let paymentTypeSelected = false;
 const CREDIT_CARD_PAYMENT = "Tarjeta de crédito";
@@ -14,8 +16,20 @@ let totalCost = article.unitCost;
 //Función que se utiliza para actualizar los costos de publicación
 function updateTotalCosts(value, tipo){
     if(tipo === 'cantidad') {
-        totalCost = totalCost * value;
+        totalCost = totalCost * parseInt(value, 10);
         console.log(totalCost);
+    } 
+    if(tipo === 'envio'){
+        console.log(value);
+        /*if(shippingPremium){
+            totalCost = totalCost * 1.15;
+        }
+    if(shippingExpress){
+        totalCost = totalCost * 1.7;
+        }
+    if(shippingStandard){
+        totalCost = totalCost * 1.5;
+        }  */  
     }
 }
 
