@@ -20,10 +20,10 @@ let totalCost = 0;
 
 //Función que se utiliza para actualizar los costos de publicación
 function updateTotalCosts(value, tipo){
+    totalCost = article.unitCost;
     if(tipo === 'cantidad') {
-        totalCost = article.unitCost;
         totalCost = totalCost * parseInt(value, 10);
-        console.log(value);
+        console.log(totalCost);
     } 
     if(tipo === 'envio'){
         if(shippingType.premium){
