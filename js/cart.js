@@ -26,7 +26,6 @@ function updateTotalCosts(value, tipo){
         console.log(value);
     } 
     if(tipo === 'envio'){
-        console.log(value);
         if(shippingType.premium){
             totalCost = totalCost * shippingPremium;
         }
@@ -35,7 +34,7 @@ function updateTotalCosts(value, tipo){
         }
     if(shippingType.standard){
         totalCost = totalCost * shippingStandard;
-        }    
+        }    console.log(totalCost);
     }
 }
 
