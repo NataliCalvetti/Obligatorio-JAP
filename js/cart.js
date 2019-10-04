@@ -3,8 +3,8 @@ let productUnitCost = 0;
 let productCurrency = "";
 let subtotal = 0;
 let shippingPremium = 1.15;
-let shippingExpress = 1.7;
-let shippingStandard = 1.5;
+let shippingExpress = 1.07;
+let shippingStandard = 1.05;
 const shippingType = {
     premium: "Premium (2-5 días) - Costo del 15% sobre el subtotal.",
     express: "Express (5-8 días) - Costo del 7% sobre el subtotal.",
@@ -20,19 +20,18 @@ let totalCost = 0;
 
 //Función que se utiliza para actualizar los costos de publicación
 function updateTotalCosts(value, tipo){
-    totalCost = article.unitCost;
     if(tipo === 'cantidad') {
-        totalCost = totalCost * parseInt(value, 10);
+        totalCost = article.unitCost * parseInt(value, 10);
         console.log(totalCost);
     } 
     if(tipo === 'envio'){
-        if(shippingType.premium === value){
+        if(value === shippingType.premium){
             totalCost = totalCost * shippingPremium;
         }
-    if(shippingType.express === value){
+    if(value === shippingType.express){
         totalCost = totalCost * shippingExpress;
         }
-    if(shippingType.standard === value){
+    if(value === shippingType.standard){
         totalCost = totalCost * shippingStandard;
         }    console.log(totalCost);
     }
