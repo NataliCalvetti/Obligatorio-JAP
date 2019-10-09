@@ -171,7 +171,7 @@ p.inline {
 }
 
 .listGrid {
-  display: inline-block;
+  display: block;
 }
 
 
