@@ -20,6 +20,7 @@ let cantidadAComprar = 0;
 let costoDeEnvio = 0;
 
 
+
 //Función que se utiliza para actualizar los costos de publicación
 function updateTotalCosts(value, tipo){
     if(tipo === 'cantidad') {
@@ -36,12 +37,13 @@ function updateTotalCosts(value, tipo){
         if(value === shippingType.standard){
             costoDeEnvio = totalCost * shippingStandard;
         }    
+        updateSubtotal();
         paymentInformation();
     }
 }
 
 function updateSubtotal(){
-
+    subtotal = totalCost * cantidadAComprar;
 }
 
 function showPaymentTypeNotSelected(){
@@ -83,8 +85,6 @@ function paymentInformation(){
     <dl>
     <dt>Cantidad a comprar</dt>
             <dd><p>${cantidadAComprar}</p></dd>
-    <dt>Costo total del costo unitario</dt>
-            <dd><p></p></dd>
     <dt>Subtotal</dt>
             <dd><p></p></dd>
     <dt>Costo de envio</dt>
