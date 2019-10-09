@@ -64,10 +64,10 @@ function showProductsList(array){
 
         htmlContentToAppend += `
         <a href="category-info.html" class="list-group-item list-group-item-action">
-        <div class="${gridRow.firstDiv}" > 
-            <div class="${gridRow.secondDiv}"> <img class="smallImg img-thumbnail" src="${product.imgSrc}"> </div>
-                <div class="${gridRow.thirdDiv}">
-                    <div class="${gridRow.fourthDiv}"> 
+        <div class="${currentGrid.firstDiv}" > 
+            <div class="${currentGrid.secondDiv}"> <img class="smallImg img-thumbnail" src="${product.imgSrc}"> </div>
+                <div class="${currentGrid.thirdDiv}">
+                    <div class="${currentGrid.fourthDiv}"> 
                         <h4 class="mb-1">${product.name}</h4>
                     </div>
                      <div>
