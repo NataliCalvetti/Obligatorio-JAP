@@ -86,7 +86,7 @@ function paymentInformation(){
     <dt>Cantidad a comprar</dt>
             <dd><p>${cantidadAComprar}</p></dd>
     <dt>Subtotal</dt>
-            <dd><p></p></dd>
+            <dd><p>${subtotal}</p></dd>
     <dt>Costo de envio</dt>
             <dd><p>${costoDeEnvio}</p></dd>
     <dt>Total a pagar</dt>
