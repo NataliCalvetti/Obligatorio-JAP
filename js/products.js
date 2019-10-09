@@ -11,7 +11,7 @@ const gridCol = {
     fourthDiv: "col-md-4"
 
 };
-const currentGrid = gridRow;
+let currentGrid = gridRow;
 
 var productsArray = []; 
 const ORDER_ASC_BY_PRICE = "min";
