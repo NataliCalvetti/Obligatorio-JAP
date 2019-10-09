@@ -8,7 +8,7 @@ const gridCol = {
     firstDiv: "album py-5 bg-light",
     secondDiv: "container",
     thirdDiv: "row",
-    fourthDiv: "col-md-4"
+    fourthDiv: "col-sm"
 
 };
 let currentGrid = gridRow;
