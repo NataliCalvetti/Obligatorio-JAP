@@ -170,6 +170,9 @@ p.inline {
   height: 38px;
 }
 
+.listGrid {
+  display: inline-block;
+}
 
 
 
