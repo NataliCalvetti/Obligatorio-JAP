@@ -5,10 +5,10 @@ const gridRow = {
     fourthDiv: "d-flex w-100 justify-content-between col-8 row"
 };
 const gridCol = {
-    firstDiv: "album py-5 bg-light",
-    secondDiv: "container",
+    firstDiv: "col-md-4",
+    secondDiv: "col-md-3",
     thirdDiv: "row",
-    fourthDiv: "col-sm"
+    fourthDiv: "col-md-4"
 
 };
 let currentGrid = gridRow;
