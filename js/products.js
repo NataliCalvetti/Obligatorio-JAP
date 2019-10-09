@@ -46,6 +46,7 @@ function gridFormat(criteria){
     if(criteria === 'col'){
         currentGrid = gridCol;
     }
+    showProductsList(productsArray);
 };
 
 document.getElementById("rowGrid").addEventListener("click", function(){
