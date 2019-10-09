@@ -74,6 +74,10 @@ function showArticles(articles){
             </dl>
             </div>   
     </div>
+    <div>
+            <dt>Cantidad a comprar</dt>
+            <dd><input class="form-control myBlock" type="number" min="0" max="${articles.count}"placeholder="Cantidad" onchange="updateTotalCosts(this.value, 'cantidad')"></dd>
+          </div>
         ` ;
         document.getElementById("showCartArticles").innerHTML = htmlContentToAppend;
     
