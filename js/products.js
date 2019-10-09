@@ -45,7 +45,7 @@ function gridFormat(criteria){
     }
     if(criteria === 'col'){
         currentGrid = gridCol;
-    }console.log(currentGrid);
+    }
     showProductsList(productsArray);
 };
 
