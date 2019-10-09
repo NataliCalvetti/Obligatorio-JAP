@@ -44,6 +44,7 @@ function updateTotalCosts(value, tipo){
 
 function updateSubtotal(){
     subtotal = totalCost * cantidadAComprar;
+    console.log(subtotal);
 }
 
 function showPaymentTypeNotSelected(){
