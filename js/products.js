@@ -5,8 +5,8 @@ const gridRow = {
     fourthDiv: "d-flex w-100 justify-content-between col-8 row"
 };
 const gridCol = {
-    firstDiv: "col-md-4",
-    secondDiv: "col-md-3",
+    firstDiv: "container",
+    secondDiv: "row",
     thirdDiv: "row",
     fourthDiv: "col-md-4"
 
