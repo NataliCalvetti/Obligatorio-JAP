@@ -1,3 +1,18 @@
+const gridRow = {
+    firstDiv: "row",
+    secondDiv: "col-3",
+    thirdDiv: "col",
+    fourthDiv: "d-flex w-100 justify-content-between col-8 row"
+};
+const gridCol = {
+    firstDiv: "album py-5 bg-light",
+    secondDiv: "container",
+    thirdDiv: "row",
+    fourthDiv: "col-md-4"
+
+};
+const currentGrid = {};
+
 var productsArray = []; 
 const ORDER_ASC_BY_PRICE = "min";
 const ORDER_DESC_BY_PRICE = "max";
@@ -24,6 +39,23 @@ function sortProducts(criteria, array){
     return result;
 }
 
+function gridFormat(criteria){
+    if(criteria === 'row'){
+        currentGrid = gridRow;
+    }
+    if(criteria === 'col'){
+        currentGrid = gridCol;
+    }
+};
+
+document.getElementById("rowGrid").addEventListener("click", function(){
+    gridFormat('row');
+});
+document.getElementById("colGrid").addEventListener("click", function(){
+    gridFormat('col');
+});
+
+
 function showProductsList(array){
     let htmlContentToAppend = "";
     for(let i = 0; i < array.length; i++){
@@ -31,10 +63,10 @@ function showProductsList(array){
 
         htmlContentToAppend += `
         <a href="category-info.html" class="list-group-item list-group-item-action">
-        <div class="row" > 
-            <div class="col-3"> <img class="smallImg img-thumbnail" src="${product.imgSrc}"> </div>
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between col-8 row"> 
+        <div class="${gridRow.firstDiv}" > 
+            <div class="${gridRow.secondDiv}"> <img class="smallImg img-thumbnail" src="${product.imgSrc}"> </div>
+                <div class="${gridRow.thirdDiv}">
+                    <div class="${gridRow.fourthDiv}"> 
                         <h4 class="mb-1">${product.name}</h4>
                     </div>
                      <div>
