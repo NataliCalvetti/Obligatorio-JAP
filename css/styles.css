@@ -174,5 +174,13 @@ p.inline {
   display: block;
 }
 
+.myContainer {
+  width: 100%;
+}
+
+.displayText {
+  display: block;
+}
+
 
 

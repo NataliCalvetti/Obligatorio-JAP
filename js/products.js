@@ -1,14 +1,24 @@
-const gridRow = {
+const gridCol = {
+    containerDiv: "col",
+    classA: "col-12",
     firstDiv: "row",
     secondDiv: "col-3",
     thirdDiv: "col",
-    fourthDiv: "d-flex w-100 justify-content-between col-8 row"
+    fourthDiv: "d-flex w-100 justify-content-between col-8 row",
+    productName: "",
+    textBody: "",
+    productText: "", 
 };
-const gridCol = {
+const gridRow = {
+    containerDiv: "row",
+    classA:"col-3",
     firstDiv: "container",
     secondDiv: "row justify-content-start",
-    thirdDiv: "col-4",
-    fourthDiv: "col-4"
+    thirdDiv: "",
+    fourthDiv: "",
+    productName: "m-1",
+    textBody: "card-body",
+    productText: "row",
 
 };
 let currentGrid = gridRow;
@@ -63,15 +73,15 @@ function showProductsList(array){
         let product = array[i];
 
         htmlContentToAppend += `
-        <a href="category-info.html" class="list-group-item list-group-item-action">
+        <a href="category-info.html" class="list-group-item list-group-item-action ${currentGrid.classA}">
         <div class="${currentGrid.firstDiv}" > 
             <div class="${currentGrid.secondDiv}"> <img class="smallImg img-thumbnail" src="${product.imgSrc}"> </div>
                 <div class="${currentGrid.thirdDiv}">
                     <div class="${currentGrid.fourthDiv}"> 
-                        <h4 class="mb-1">${product.name}</h4>
+                        <h4 class="${currentGrid.productName}">${product.name}</h4>
                     </div>
-                     <div>
-                        <p>${product.description}</p>
+                     <div class="${currentGrid.textBody}">
+                        <p class="${currentGrid.productText}">${product.description}</p>
                      </div> 
                      <div class="alignRight"> 
                         <p class="inline">${product.currency} $ ${product.cost}</p>
@@ -82,8 +92,13 @@ function showProductsList(array){
         </a>
         `
 
-        document.getElementById("productList").innerHTML = htmlContentToAppend;
     }
+    let html = `
+    <div class="${currentGrid.containerDiv}">
+    ${htmlContentToAppend}
+    </div>
+    `;
+    document.getElementById("productList").innerHTML = html;
 }
 
 function sortAndShowProducts(sortCriteria, array){
