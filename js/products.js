@@ -17,7 +17,7 @@ const gridRow = {
     thirdDiv: "",
     fourthDiv: "",
     productName: "m-1",
-    textBody: "card-body",
+    textBody: "card-body textMargin",
     productText: "row",
 
 };
