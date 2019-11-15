@@ -192,3 +192,48 @@ p.inline {
   margin-left: 10%;
 }
 
+.payButton {
+  margin-top: 5%;
+}
+
+.paymentTab {
+  margin: 4% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%; 
+}
+
+.paymentDoneError {
+  display: none;
+}
+
+.zIndex {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  z-index: 5;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.shopDoneModal {
+  display: none;
+  margin: 3% auto; 
+  padding: 3%;
+  border: 1px #888;
+  width: 50%;
+  z-index: 100;
+}
+
+.paymentDone {
+  font-size: large;
+  margin-left: 25%;
+}
+
+
+
+

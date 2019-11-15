@@ -11,13 +11,15 @@ const shippingType = {
     standard:"Standard (12 a 15 días) - Costo del 5% sobre el subtotal."   
 }
 let total = 0;
-let paymentTypeSelected = false;
 const CREDIT_CARD_PAYMENT = "Tarjeta de crédito";
 const BANKING_PAYMENT = "Transferencia bancaria";
 let ERROR_MSG = "Ha habido un error :(, verifica qué pasó.";
 let totalCost = 0;
 let cantidadAComprar = 0;
 let costoDeEnvio = 0;
+let closeX = document.getElementById('closeX');
+
+
 
 
 
@@ -46,12 +48,12 @@ function updateSubtotal(){
     subtotal = totalCost;
 }
 
-function showPaymentTypeNotSelected(){
-
+function showPaymentTab(){
+    document.querySelector('.zIndex').style.display = 'block';
 }
 
-function hidePaymentTypeNotSelected(){
-
+function hidePaymentTab(){
+        document.querySelector('.zIndex').style.display = 'none';   
 }
 
 function showArticles(articles){

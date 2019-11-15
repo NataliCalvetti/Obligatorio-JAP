@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     });
 
     function filterProducts(){
-        const filterArray = productsArray.filter((product)=>{  
+        const filterArray = productsArray.filter((product) =>{  
             if (!maxCost){
                 if (minCost){
                     return product.cost >= minCost;
