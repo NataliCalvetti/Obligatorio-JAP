@@ -73,7 +73,7 @@ function showProductsList(array){
         let product = array[i];
 
         htmlContentToAppend += `
-        <a href="category-info.html" class="list-group-item list-group-item-action ${currentGrid.classA}">
+        <a href="http://localhost:5000/category-info" class="list-group-item list-group-item-action ${currentGrid.classA}">
         <div class="${currentGrid.firstDiv}" > 
             <div class="${currentGrid.secondDiv}"> <img class="smallImg img-thumbnail" src="${product.imgSrc}"> </div>
                 <div class="${currentGrid.thirdDiv}">
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(PRODUCTS_URL).then(function(jsonResult){
         if (jsonResult.status === "ok")
         {
-            productsArray = jsonResult.data;
+            productsArray = jsonResult.data.data;
             showProductsList(productsArray);
         }
     });

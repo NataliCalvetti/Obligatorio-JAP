@@ -28,9 +28,9 @@
         }
       }
     </style>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/dropzone.css" rel="stylesheet">
+    <link href="http://localhost:5000/css-drop" rel="stylesheet">
+    <link href="http://localhost:5000/css-styles" rel="stylesheet">
+    <link href="http://localhost:5000/css-boots" rel="stylesheet">
   </head>
   <body>
       <nav class="navbar navbar-dark navbar-expand-lg site-header   sticky-top py-1 bg-dark">
@@ -41,19 +41,19 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                   <li class="nav-item">
-                      <a class="nav-link" href="index.html">Inicio</a>
+                      <a class="nav-link" href="http://localhost:5000/home-page">Inicio</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="categories.html">Categorías</a>
+                      <a class="nav-link" href="http://localhost:5000/categories">Categorías</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="products.html">Productos</a>
+                      <a class="nav-link" href="http://localhost:5000/products">Productos</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="sell.html">Vender</a>
+                      <a class="nav-link" href="http://localhost:5000/sell">Vender</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="cart.html">Mi carrito</a>
+                      <a class="nav-link" href="http://localhost:5000/cart">Mi carrito</a>
                   </li>
                   <li class="nav-item" id="addBoton">
                   </li>
@@ -143,7 +143,7 @@
                     <div class="modal-footer">
                       <button type="button" class="btn btn-primary" data-dismiss="modal" id="shopButton">Realizar compra</button>
                     </div>
-                    <div class="paymentDoneError">Verifique los datos e intente nuevamente</div>
+                    <div class="paymentDoneError invalid-feedback">Verifique los datos e intente nuevamente</div>
                   </div>
                 </div>
               </div>
@@ -157,13 +157,13 @@
               </div>
             </div>
       <div id="spinner-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
-      <script src="js/vendor/jquery-3.4.1.min.js"></script>
-      <script src="js/vendor/bootstrap.bundle.min.js"></script>
-      <script src="js/vendor/bootbox.min.js"></script>
-      <script src="js/init.js"></script>
-      <script src="js/cart.js"></script>
-      <script src="./users-db.js"></script>
-      <script src="script.js"></script>
-      <script src="./js/paymentValidation.js"></script>
+      <script src="http://localhost:5000/js-vendor-jquery"></script>
+      <script src="http://localhost:5000/js-vendor-bootstrap"></script>
+      <script src="http://localhost:5000/js-vendor-bootbox"></script>
+      <script src="http://localhost:5000/js-init"></script>
+      <script src="http://localhost:5000/js-cart"></script>
+      <script src="http://localhost:5000/js-userdb"></script>
+      <script src="http://localhost:5000/js-script"></script>
+      <script src="http://localhost:5000/js-payment-validation"></script>
     </body>
 </html>

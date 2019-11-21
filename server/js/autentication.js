@@ -43,7 +43,7 @@ document.querySelector('button').addEventListener('click', (event) =>{
             if (usuario){
                if (usuario.password == passwordInput){
                    localStorage.setItem('usuario', usuario.username);
-                   window.location.href = 'index.html';
+                   window.location.href = 'http://localhost:5000/home-page';
                } else {
                    document.querySelector('.mensaje-contraseña').style.display = 'inline-block';
 

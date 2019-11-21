@@ -1,9 +1,9 @@
-const CATEGORIES_URL = "https://japdevdep.github.io/ecommerce-api/category/all.json";
+const CATEGORIES_URL = "http://localhost:5000/api/allCategories";
 const PUBLISH_PRODUCT_URL = "https://japdevdep.github.io/ecommerce-api/product/publish.json";
-const CATEGORY_INFO_URL = "https://japdevdep.github.io/ecommerce-api/category/1234.json";
-const PRODUCTS_URL = "https://japdevdep.github.io/ecommerce-api/product/all.json";
-const PRODUCT_INFO_URL = "https://japdevdep.github.io/ecommerce-api/product/5678.json";
-const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
+const CATEGORY_INFO_URL = "http://localhost:5000/api/categoryInfo";
+const PRODUCTS_URL = "http://localhost:5000/api/allProducts";
+const PRODUCT_INFO_URL = "http://localhost:5000/api/productInfo";
+const CART_INFO_URL = "http://localhost:5000/api/cartProduct";
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 
 

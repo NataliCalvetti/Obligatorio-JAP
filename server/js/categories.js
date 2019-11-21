@@ -7,6 +7,7 @@ var minCount = undefined;
 var maxCount = undefined;
 
 function sortCategories(criteria, array){
+    console.log(array);
     let result = [];
     if (criteria === ORDER_ASC_BY_NAME)
     {
@@ -45,7 +46,7 @@ function showCategoriesList(){
             ((maxCount == undefined) || (maxCount != undefined && parseInt(category.productCount) <= maxCount))){
 
             htmlContentToAppend += `
-            <a href="category-info.html" class="list-group-item list-group-item-action">
+            <a href="http://localhost:5000/category-info" class="list-group-item list-group-item-action">
                 <div class="row">
                     <div class="col-3">
                         <img src="` + category.imgSrc + `" alt="` + category.description + `" class="img-thumbnail">
@@ -84,8 +85,9 @@ function sortAndShowCategories(sortCriteria, categoriesArray){
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(CATEGORIES_URL).then(function(resultObj){
+        console.log(resultObj);
         if (resultObj.status === "ok"){
-            sortAndShowCategories(ORDER_ASC_BY_NAME, resultObj.data);
+            sortAndShowCategories(ORDER_ASC_BY_NAME, resultObj.data.data);
         }
     });
 

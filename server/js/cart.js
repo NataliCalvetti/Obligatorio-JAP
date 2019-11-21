@@ -109,8 +109,9 @@ function paymentInformation(){
 document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(CART_INFO_URL).then(function(resultObj){
         if (resultObj.status === "ok"){
-            article = resultObj.data.articles[0];
+            article = resultObj.data.data.articles[0];
             showArticles(article);
         }
+        console.log(resultObj);
     });
 });

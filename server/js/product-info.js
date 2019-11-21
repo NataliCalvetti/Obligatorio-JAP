@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
         if (resultObj.status === "ok")
         {
-            product = resultObj.data;
+            product = resultObj.data.data;
             showProduct(product);
             showImagesGallery(product.images);
         }
